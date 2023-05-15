@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Oswald", sans-serif;
 }
 
 .carousel-content {
@@ -102,7 +101,7 @@ a {
 #movie-1 {
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.486),
+      #00000044,
       transparent 85%,
       black,
       black
@@ -115,7 +114,7 @@ a {
 #movie-2 {
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.486),
+      #00000044,
       transparent 75%,
       black,
       black
@@ -128,7 +127,7 @@ a {
 #movie-3 {
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 0.486),
+      #00000044,
       transparent 85%,
       black,
       black

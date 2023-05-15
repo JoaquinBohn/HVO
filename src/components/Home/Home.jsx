@@ -1,11 +1,11 @@
 import React from "react";
-import Carousel from "../Carousel/Carousel";
 import "./Home.css";
+import Header from "../Header/Header";
 
 const Home = () => {
   return (
     <div className="home">
-      <Carousel />
+      <Header />
     </div>
   );
 };

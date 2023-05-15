@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.sections {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 200px;
+  color: white;
+}

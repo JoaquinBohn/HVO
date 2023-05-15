@@ -1,0 +1,46 @@
+.menu-icon {
+  padding-top: 10px;
+  text-align: end;
+}
+
+.menu-unfold {
+  height: 100vh;
+  width: 250px;
+  padding-top: 50px;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: black;
+  color: rgba(255, 255, 255, 0.856);
+  position: fixed;
+  top: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.356);
+}
+
+.menu-hidden {
+  display: none;
+}
+
+.menu-unfold p {
+  font-size: 25px;
+}
+
+.close-button {
+  border: none;
+  background-color: #ffffff00;
+  color: rgba(255, 255, 255, 0.801);
+  cursor: pointer;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 100%;
+    left: 0;
+  }
+  to {
+    opacity: 0%;
+    left: -250px;
+  }
+}
