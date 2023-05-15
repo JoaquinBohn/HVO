@@ -1,0 +1,147 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+}
+
+.carousel-content {
+  height: 75vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.carousel-slide {
+  height: 100%;
+  display: flex;
+  padding-top: 10px;
+  padding-left: 30px;
+  opacity: 0;
+}
+
+.carousel-animated-slide {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding-top: 10px;
+  padding-left: 30px;
+  animation-name: appear;
+  animation-duration: 1s;
+}
+
+a {
+  text-decoration: none;
+}
+
+.carousel-arrows {
+  position: relative;
+  bottom: 300px;
+  height: 10%;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.carousel-button {
+  border: none;
+  background-color: #ffffff00;
+  color: rgba(255, 255, 255, 0.801);
+  cursor: pointer;
+}
+
+.carousel-link {
+  color: rgba(0, 0, 0, 0.568);
+}
+
+.slide-title {
+  margin: 0;
+  color: white;
+  font-size: 50px;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    #00000088 70%,
+    transparent
+  );
+  text-decoration: overline;
+}
+
+.slide-text {
+  color: white;
+  font-size: 20px;
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    #00000088 70%,
+    transparent
+  );
+  margin: 0;
+  margin-bottom: 80px;
+}
+
+.carousel-indicators {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-around;
+  width: 80px;
+}
+
+#movie-1 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.486),
+      transparent 85%,
+      black,
+      black
+    ),
+    url("https://res.cloudinary.com/drdgu83bp/image/upload/v1684160593/pelis/mars_ec1awd.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+#movie-2 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.486),
+      transparent 75%,
+      black,
+      black
+    ),
+    url("https://res.cloudinary.com/drdgu83bp/image/upload/v1684160976/pelis/horror_f4twvs.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+#movie-3 {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.486),
+      transparent 85%,
+      black,
+      black
+    ),
+    url("https://res.cloudinary.com/drdgu83bp/image/upload/v1684160594/pelis/love_zbtouf.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+#active {
+  opacity: 100%;
+}
+
+#inactive {
+  opacity: 70%;
+}
