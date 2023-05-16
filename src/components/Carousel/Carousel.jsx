@@ -9,7 +9,6 @@ const Carousel = () => {
     id: "movie-1",
     title: "Mars 33",
     description: "A generic sci-fi space movie.",
-    img: "https://res.cloudinary.com/drdgu83bp/image/upload/v1684160593/pelis/mars_ec1awd.jpg",
     video:
       "https://res.cloudinary.com/drdgu83bp/video/upload/v1684159756/pelis/mars_m5rx2e.mp4",
   };
@@ -17,7 +16,6 @@ const Carousel = () => {
     id: "movie-2",
     title: "No signal",
     description: "A generic horror movie.",
-    img: "https://res.cloudinary.com/drdgu83bp/image/upload/v1684160976/pelis/horror_f4twvs.jpg",
     video:
       "https://res.cloudinary.com/drdgu83bp/video/upload/v1684159756/pelis/horror_lcrnzo.mp4",
   };
@@ -25,7 +23,6 @@ const Carousel = () => {
     id: "movie-3",
     title: "Remember Julia",
     description: "A generic love movie.",
-    img: "https://res.cloudinary.com/drdgu83bp/image/upload/v1684160594/pelis/love_zbtouf.jpg",
     video:
       "https://res.cloudinary.com/drdgu83bp/video/upload/v1684159753/pelis/love_hxbmiv.mp4",
   };
@@ -66,7 +63,7 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       next();
-    }, 4500);
+    }, 15000);
     return () => clearInterval(interval);
   });
 
@@ -92,6 +89,33 @@ const Carousel = () => {
           className={loading ? "carousel-slide" : "carousel-animated-slide"}
           id={selectedSlide.id}
         >
+          <video
+            autoPlay
+            loop
+            muted
+            id={buttonState[0] === "active" ? "video-active" : "video-inactive"}
+          >
+            <source src={slide1.video} type="video/mp4" />
+          </video>
+
+          <video
+            autoPlay
+            loop
+            muted
+            id={buttonState[1] === "active" ? "video-active" : "video-inactive"}
+          >
+            <source src={slide2.video} type="video/mp4" />
+          </video>
+
+          <video
+            autoPlay
+            loop
+            muted
+            id={buttonState[2] === "active" ? "video-active" : "video-inactive"}
+          >
+            <source src={slide3.video} type="video/mp4" />
+          </video>
+
           <h2 className="slide-title">{selectedSlide.title}</h2>
           <p className="slide-text">{selectedSlide.description}</p>
         </div>
