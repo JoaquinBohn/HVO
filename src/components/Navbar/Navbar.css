@@ -12,6 +12,7 @@
 .navbar-menu {
   display: flex;
   flex-direction: row;
+  width: 33%;
 }
 
 .sections {
@@ -20,4 +21,75 @@
   justify-content: space-evenly;
   width: 200px;
   color: white;
+}
+
+.navbar-home {
+  width: 33%;
+}
+
+.logo {
+  color: white;
+  font-family: "Bruno Ace SC", cursive;
+}
+
+.navbar-search {
+  width: 33%;
+  padding-top: 15px;
+}
+
+.search-button {
+  border: none;
+  background-color: #ffffff00;
+  color: rgba(255, 255, 255, 0.801);
+  cursor: pointer;
+}
+
+.search-button-hidden {
+  display: none;
+}
+
+.search-form-show {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+}
+
+.search-form-hidden {
+  display: none;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  background-color: black;
+  color: white;
+  border-radius: 2%;
+  font-size: 15px;
+}
+
+@keyframes search-fade-out {
+  from {
+    opacity: 100%;
+    left: 0;
+  }
+  to {
+    opacity: 0%;
+    left: -100px;
+  }
+}
+
+@keyframes search-fade-in {
+  from {
+    opacity: 0%;
+    right: 0;
+  }
+  to {
+    opacity: 0%;
+    right: -100px;
+  }
 }

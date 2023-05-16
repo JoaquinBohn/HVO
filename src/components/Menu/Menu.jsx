@@ -42,11 +42,11 @@ const Menu = () => {
         <button onClick={close} className="close-button">
           <CloseIcon />
         </button>
-        <p>Inicio</p>
-        <p>Peliculas</p>
+        <p>Home</p>
+        <p>Movie</p>
         <p>Series</p>
-        <p>Recien añadidos</p>
-        <p>Proximamente</p>
+        <p>Recent</p>
+        <p>Coming soon</p>
       </div>
     </div>
   );
