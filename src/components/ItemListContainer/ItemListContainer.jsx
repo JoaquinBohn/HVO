@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { db } from "../../firebaseConfig";
-import { getDocs, collection, query, where } from "firebase/firestore";
+import { getDocs, collection, query, limit } from "firebase/firestore";
 import "./ItemListContainer.css";
 import ItemList from "../ItemList/ItemList";
 
@@ -10,7 +10,7 @@ const ItemListContainer = () => {
   useEffect(() => {
     const itemCollection = collection(db, "contenido");
 
-    const q = query(itemCollection, where("category", "==", "movie"));
+    const q = query(itemCollection, limit(5));
 
     getDocs(q)
       .then((res) => {

@@ -49,8 +49,20 @@
   text-decoration: overline;
 }
 
-#category {
+#Movie {
   font-size: 18px;
   margin-bottom: 5px;
   text-shadow: 2px 2px 5px rgb(67, 138, 245);
+}
+
+#Series {
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 5px rgb(144, 67, 245);
+}
+
+#Docuseries {
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-shadow: 2px 2px 5px rgb(24, 204, 84);
 }

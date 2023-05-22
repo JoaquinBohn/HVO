@@ -15,7 +15,7 @@ const Card = ({ element }) => {
           <h4 className="card-detail" id="genre">
             {element.genre}
           </h4>
-          <h4 className="card-detail" id="category">
+          <h4 className="card-detail" id={element.category}>
             {element.category}
           </h4>
         </div>

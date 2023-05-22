@@ -1,0 +1,141 @@
+.genres-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 50px;
+  background-color: black;
+}
+
+.genres-title {
+  color: white;
+  font-weight: 100;
+}
+
+.genres {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 140%;
+  height: 500px;
+  justify-content: space-around;
+}
+
+.genre-card {
+  background-size: cover;
+  background-position: center center;
+  width: 250px;
+  height: 400px;
+  filter: grayscale(20%);
+  transition: 0.5s;
+}
+
+.genre-card:hover {
+  filter: grayscale(0);
+  transform: scale(1.1, 1.1);
+}
+
+.genre-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.5s;
+}
+
+.genre-name h3 {
+  color: white;
+  font-size: 40px;
+}
+
+.genre-name:hover {
+  opacity: 1;
+}
+
+#romance {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.596),
+      transparent 90%,
+      black
+    ),
+    url(https://res.cloudinary.com/drdgu83bp/image/upload/v1684257889/pelis/romance_e6fniu.jpg);
+}
+
+#romance h3 {
+  text-shadow: 2px 2px 5px rgb(204, 25, 25);
+}
+
+#sci-fi {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.596),
+      transparent 90%,
+      black
+    ),
+    url(https://res.cloudinary.com/drdgu83bp/image/upload/v1684257889/pelis/science_fiction_rdceeo.jpg);
+}
+
+#sci-fi h3 {
+  text-shadow: 2px 2px 5px rgb(67, 138, 245);
+}
+
+#horror {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.596),
+      transparent 90%,
+      black
+    ),
+    url(https://res.cloudinary.com/drdgu83bp/image/upload/v1684257889/pelis/horror_p0sof5.jpg);
+}
+
+#horror h3 {
+  text-shadow: 2px 2px 5px rgb(63, 14, 141);
+}
+
+#art {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.596),
+      transparent 90%,
+      black
+    ),
+    url(https://res.cloudinary.com/drdgu83bp/image/upload/v1684257890/pelis/art_wdry7i.jpg);
+}
+
+#art h3 {
+  text-shadow: 2px 2px 5px rgb(187, 93, 5);
+}
+
+#drama {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.596),
+      transparent 90%,
+      black
+    ),
+    url(https://res.cloudinary.com/drdgu83bp/image/upload/v1684257890/pelis/drama_idmszn.jpg);
+}
+
+#drama h3 {
+  text-shadow: 2px 2px 5px rgb(150, 100, 151);
+}
+
+#fantasy {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.596),
+      transparent 90%,
+      black
+    ),
+    url(https://res.cloudinary.com/drdgu83bp/image/upload/v1684257889/pelis/fantasy_d7psn9.jpg);
+}
+
+#fantasy h3 {
+  text-shadow: 2px 2px 5px rgb(27, 160, 87);
+}
