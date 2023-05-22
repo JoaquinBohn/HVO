@@ -1,0 +1,14 @@
+.trending {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding-left: 50px;
+  background-color: black;
+}
+
+.trending-title {
+  color: white;
+  font-weight: 100;
+}

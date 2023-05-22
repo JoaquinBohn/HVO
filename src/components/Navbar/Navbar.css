@@ -6,7 +6,7 @@
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 9;
+  z-index: 10;
 }
 
 .navbar-menu {
@@ -21,6 +21,7 @@
   justify-content: space-evenly;
   width: 200px;
   color: white;
+  font-size: 18px;
 }
 
 .navbar-home {

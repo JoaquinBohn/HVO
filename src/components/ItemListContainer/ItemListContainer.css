@@ -1,0 +1,7 @@
+.itemListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  width: 120%;
+  height: 300px;
+}
