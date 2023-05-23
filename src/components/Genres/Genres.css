@@ -20,6 +20,35 @@
   width: 140%;
   height: 500px;
   justify-content: space-around;
+  position: relative;
+}
+
+#move-forward {
+  right: 300px;
+  animation: moveForward ease 0.5s;
+}
+
+#move-backward {
+  right: 0;
+  animation: moveBackward ease 0.5s;
+}
+
+@keyframes moveForward {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 300px;
+  }
+}
+
+@keyframes moveBackward {
+  0% {
+    right: 300px;
+  }
+  100% {
+    right: 0;
+  }
 }
 
 .genre-card {
@@ -138,4 +167,47 @@
 
 #fantasy h3 {
   text-shadow: 2px 2px 5px rgb(27, 160, 87);
+}
+
+.genre-arrow {
+  position: relative;
+  bottom: 300px;
+  height: 1px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.arrow-button {
+  border: none;
+  background-color: #ffffff00;
+  color: rgba(255, 255, 255, 0.801);
+  cursor: pointer;
+}
+
+.arrow-icon {
+  opacity: 0.4;
+  transition: opacity 0.5s;
+}
+
+.arrow-icon:hover {
+  opacity: 1;
+}
+
+#arrow-hidden {
+  display: none;
+}
+
+#arrow-show {
+  display: contents;
+}
+
+.aux-hidden {
+  display: none;
+}
+
+.aux-show {
+  width: 100px;
 }

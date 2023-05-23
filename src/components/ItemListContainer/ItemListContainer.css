@@ -1,7 +1,78 @@
 .itemListContainer {
   display: flex;
-  flex-wrap: wrap;
   overflow: hidden;
   width: 120%;
   height: 250px;
+  position: relative;
+}
+
+.itemList-arrow {
+  position: relative;
+  bottom: 150px;
+  height: 1px;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#move-forw {
+  right: 500px;
+  animation: moveForw ease 0.5s;
+}
+
+#move-backw {
+  right: 0;
+  animation: moveBackw ease 0.5s;
+}
+
+@keyframes moveForw {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: 500px;
+  }
+}
+
+@keyframes moveBackw {
+  0% {
+    right: 500px;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+.arrow-list-button {
+  border: none;
+  background-color: #ffffff00;
+  color: rgba(255, 255, 255, 0.801);
+  cursor: pointer;
+}
+
+.arrow-list-icon {
+  opacity: 0.4;
+  transition: opacity 0.5s;
+}
+
+.arrow-list-icon:hover {
+  opacity: 1;
+}
+
+#arrow-list-hidden {
+  display: none;
+}
+
+#arrow-list-show {
+  display: contents;
+}
+
+.aux-list-hidden {
+  display: none;
+}
+
+.aux-list-show {
+  width: 100px;
 }
