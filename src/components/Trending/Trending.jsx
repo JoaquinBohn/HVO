@@ -6,7 +6,7 @@ const Trending = () => {
   return (
     <div className="trending">
       <h2 className="trending-title">Trending now</h2>
-      <ItemListContainer />
+      <ItemListContainer filter={false} />
     </div>
   );
 };

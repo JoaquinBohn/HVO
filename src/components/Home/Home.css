@@ -1,5 +1,5 @@
 .home {
-  height: 100vh;
   background-color: black;
   font-family: "Oswald", sans-serif;
+  overflow: hidden;
 }

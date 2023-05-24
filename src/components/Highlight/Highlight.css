@@ -1,0 +1,46 @@
+.highlight {
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlight-info {
+  width: 30%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+}
+
+.highlight-info h2 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 100;
+}
+
+.highlight-buttons {
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+  justify-content: space-around;
+}
+
+.highlight-content {
+  background-image: url(https://res.cloudinary.com/drdgu83bp/image/upload/v1684257888/pelis/sad_rcqx3e.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.highlight-video {
+  opacity: 0;
+  transition: opacity 1s;
+  background-color: black;
+}
+
+.highlight-video:hover {
+  opacity: 1;
+}

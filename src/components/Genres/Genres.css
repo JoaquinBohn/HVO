@@ -18,13 +18,13 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 140%;
-  height: 500px;
+  height: 450px;
   justify-content: space-around;
   position: relative;
 }
 
 #move-forward {
-  right: 300px;
+  right: 550px;
   animation: moveForward ease 0.5s;
 }
 
@@ -38,13 +38,13 @@
     right: 0;
   }
   100% {
-    right: 300px;
+    right: 550px;
   }
 }
 
 @keyframes moveBackward {
   0% {
-    right: 300px;
+    right: 550px;
   }
   100% {
     right: 0;

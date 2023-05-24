@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  height: 70px;
+  height: 50px;
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 10;
+  background-color: rgba(0, 0, 0, 0.705);
 }
 
 .navbar-menu {

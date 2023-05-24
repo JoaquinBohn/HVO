@@ -1,12 +1,19 @@
 import { useEffect, useState } from "react";
 import { db } from "../../firebaseConfig";
-import { getDocs, collection, query, limit } from "firebase/firestore";
+import {
+  getDocs,
+  collection,
+  query,
+  limit,
+  where,
+  orderBy,
+} from "firebase/firestore";
 import "./ItemListContainer.css";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ItemList from "../ItemList/ItemList";
 
-const ItemListContainer = () => {
+const ItemListContainer = ({ filter }) => {
   const [items, setItems] = useState([]);
   const [listPosition, setListPosition] = useState(0);
   const [showBackArrow, setShowBackArrow] = useState(false);
@@ -32,7 +39,9 @@ const ItemListContainer = () => {
   useEffect(() => {
     const itemCollection = collection(db, "contenido");
 
-    const q = query(itemCollection, limit(5));
+    const q = filter
+      ? query(itemCollection, where("category", "==", "Series"), limit(5))
+      : query(itemCollection, limit(5), orderBy("name"));
 
     getDocs(q)
       .then((res) => {
@@ -46,7 +55,7 @@ const ItemListContainer = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [filter]);
 
   return (
     <div>

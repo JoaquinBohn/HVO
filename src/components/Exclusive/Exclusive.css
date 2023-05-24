@@ -1,0 +1,24 @@
+.exclusive {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: black;
+  overflow: hidden;
+  padding-left: 50px;
+}
+
+.exclusive-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: white;
+  padding-left: 50px;
+}
+
+.exclusive-info h2 {
+  margin: 0;
+  font-weight: 100;
+  font-size: 30px;
+}
