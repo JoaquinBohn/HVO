@@ -5,6 +5,7 @@ import Trending from "../Trending/Trending";
 import Genres from "../Genres/Genres";
 import Exclusive from "../Exclusive/Exclusive";
 import Highlight from "../Highlight/Highlight";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Genres />
       <Highlight />
       <Exclusive />
+      <Footer />
     </div>
   );
 };
