@@ -65,7 +65,7 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  z-index: 10;
+  z-index: 9;
 }
 
 .carousel-button {

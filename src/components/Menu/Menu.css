@@ -1,3 +1,7 @@
+.menu {
+  z-index: 10;
+}
+
 .menu-icon {
   padding-top: 10px;
   text-align: end;
