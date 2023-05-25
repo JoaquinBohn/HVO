@@ -121,10 +121,18 @@ const Carousel = () => {
         </div>
         <div className="carousel-arrows">
           <button className="carousel-button" onClick={previous}>
-            <KeyboardArrowLeftTwoToneIcon sx={{ fontSize: "40px" }} />
+            <KeyboardArrowLeftTwoToneIcon
+              sx={{
+                fontSize: { xs: "30px", sm: "40px", md: "50px", lg: "60px" },
+              }}
+            />
           </button>
           <button className="carousel-button" onClick={next}>
-            <KeyboardArrowRightTwoToneIcon sx={{ fontSize: "40px" }} />
+            <KeyboardArrowRightTwoToneIcon
+              sx={{
+                fontSize: { xs: "30px", sm: "40px", md: "50px", lg: "60px" },
+              }}
+            />
           </button>
         </div>
       </div>

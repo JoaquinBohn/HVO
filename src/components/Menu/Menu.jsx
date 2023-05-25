@@ -30,7 +30,11 @@ const Menu = () => {
       <div className="menu-icon">
         <button onClick={open} className="close-button">
           <MenuIcon
-            sx={{ fontSize: "40px", color: "white", paddingLeft: "30px" }}
+            sx={{
+              fontSize: { xs: "30px", sm: "35px", md: "40px", lg: "40px" },
+              color: "white",
+              paddingLeft: { xs: "10px", sm: "15px", md: "20px", lg: "30px" },
+            }}
           />
         </button>
       </div>

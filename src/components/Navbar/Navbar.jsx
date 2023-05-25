@@ -7,9 +7,12 @@ import "aos/dist/aos.css";
 
 const Navbar = () => {
   const [showSearch, setShowSearch] = useState(false);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const search = () => {
-    setShowSearch(true);
+    if (screenWidth > 470) {
+      setShowSearch(true);
+    }
   };
 
   useEffect(() => {
@@ -18,8 +21,13 @@ const Navbar = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
     setShowSearch(false);
   };
+
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  }, []);
 
   return (
     <div className="navbar">
@@ -55,7 +63,12 @@ const Navbar = () => {
               placeholder="Movies, series and more..."
             />
             <button className="search-button" onClick={handleSubmit}>
-              <SearchIcon sx={{ fontSize: "20px", paddingTop: "5px" }} />
+              <SearchIcon
+                sx={{
+                  fontSize: { xs: "15px", sm: "15px", md: "20px", lg: "20px" },
+                  paddingTop: "5px",
+                }}
+              />
             </button>
           </form>
         </div>

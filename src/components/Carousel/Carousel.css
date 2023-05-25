@@ -73,6 +73,12 @@ a {
   background-color: #ffffff00;
   color: rgba(255, 255, 255, 0.801);
   cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.carousel-button:hover {
+  opacity: 1;
 }
 
 .carousel-link {
@@ -185,5 +191,33 @@ a {
   }
   100% {
     opacity: 100%;
+  }
+}
+
+@media (max-width: 470px) {
+  .carousel-content {
+    height: 65vh;
+  }
+
+  .carousel-animated-slide:before {
+    height: 65vh;
+  }
+
+  .carousel-arrows {
+    bottom: 200px;
+    padding: 10px;
+  }
+
+  .slide-title {
+    font-size: 25px;
+  }
+
+  .slide-text {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  #video-active {
+    height: 65vh;
   }
 }

@@ -95,3 +95,17 @@
     right: -100px;
   }
 }
+
+@media (max-width: 470px) {
+  .sections {
+    display: none;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .search-form-show {
+    display: none;
+  }
+}

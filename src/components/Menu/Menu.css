@@ -48,3 +48,15 @@
     left: -250px;
   }
 }
+
+@media (max-width: 470px) {
+  .menu-unfold p {
+    font-size: 20px;
+  }
+
+  .menu-unfold {
+    width: 120px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+}
