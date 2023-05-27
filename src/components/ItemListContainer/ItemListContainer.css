@@ -27,6 +27,16 @@
   animation: moveBackw ease 0.5s;
 }
 
+#move-forw-forw {
+  right: 700px;
+  animation: moveForwForw ease 0.5s;
+}
+
+#move-backw-mid {
+  right: 500px;
+  animation: moveBackwMid ease 0.5s;
+}
+
 @keyframes moveForw {
   0% {
     right: 0;
@@ -42,6 +52,24 @@
   }
   100% {
     right: 0;
+  }
+}
+
+@keyframes moveBackwMid {
+  0% {
+    right: 700px;
+  }
+  100% {
+    right: 500px;
+  }
+}
+
+@keyframes moveForwForw {
+  0% {
+    right: 500px;
+  }
+  100% {
+    right: 700px;
   }
 }
 
@@ -75,4 +103,21 @@
 
 .aux-list-show {
   width: 100px;
+}
+
+@media (max-width: 470px) {
+  .itemListContainer {
+    height: 120px;
+    width: 110%;
+  }
+
+  .aux-list-show {
+    width: 5px;
+  }
+
+  .itemList-arrow {
+    width: 40%;
+    bottom: 60px;
+    padding: 5px;
+  }
 }

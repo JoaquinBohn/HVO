@@ -39,6 +39,11 @@
   font-weight: 100;
 }
 
+.category {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
 #name {
   margin-bottom: 10px;
   font-size: 30px;
@@ -50,19 +55,33 @@
 }
 
 #Movie {
-  font-size: 18px;
-  margin-bottom: 5px;
   text-shadow: 2px 2px 5px rgb(67, 138, 245);
 }
 
 #Series {
-  font-size: 18px;
-  margin-bottom: 5px;
   text-shadow: 2px 2px 5px rgb(144, 67, 245);
 }
 
 #Docuseries {
-  font-size: 18px;
-  margin-bottom: 5px;
   text-shadow: 2px 2px 5px rgb(24, 204, 84);
+}
+
+@media (max-width: 470px) {
+  .card-img-container {
+    width: 200px;
+    height: 120px;
+    transition: transform 0.5s;
+  }
+
+  .category {
+    font-size: 15px;
+  }
+
+  #name {
+    font-size: 20px;
+  }
+
+  #genre {
+    font-size: 18px;
+  }
 }

@@ -12,3 +12,14 @@
   color: white;
   font-weight: 100;
 }
+
+@media (max-width: 470px) {
+  .trending {
+    padding-left: 20px;
+    height: 200px;
+  }
+
+  .trending-title {
+    font-size: 20px;
+  }
+}

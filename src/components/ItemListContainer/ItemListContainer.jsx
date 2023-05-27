@@ -1,13 +1,6 @@
 import { useEffect, useState } from "react";
 import { db } from "../../firebaseConfig";
-import {
-  getDocs,
-  collection,
-  query,
-  limit,
-  where,
-  orderBy,
-} from "firebase/firestore";
+import { getDocs, collection, query, limit, where } from "firebase/firestore";
 import "./ItemListContainer.css";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -18,30 +11,53 @@ const ItemListContainer = ({ filter }) => {
   const [listPosition, setListPosition] = useState(0);
   const [showBackArrow, setShowBackArrow] = useState(false);
   const [showForArrow, setShowForArrow] = useState(true);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [slideLimit, setSlideLimit] = useState(2);
+  const [transition, setTransition] = useState("move-backw");
 
   const moveBack = () => {
     if (listPosition > 0) {
       setListPosition(listPosition - 1);
+      if (listPosition === 2) {
+        setTransition("move-backw-mid");
+      } else {
+        setTransition("move-backw");
+      }
     }
   };
 
   const moveFor = () => {
-    if (listPosition < 2) {
+    if (listPosition < slideLimit) {
       setListPosition(listPosition + 1);
+      if (listPosition === slideLimit - 2) {
+        setTransition("move-forw-forw");
+      } else {
+        setTransition("move-forw");
+      }
     }
   };
 
   useEffect(() => {
+    setSlideLimit(screenWidth < 471 ? 3 : 2);
+  }, [screenWidth]);
+
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  }, []);
+
+  useEffect(() => {
     listPosition === 0 ? setShowBackArrow(false) : setShowBackArrow(true);
-    listPosition < 1 ? setShowForArrow(true) : setShowForArrow(false);
-  }, [listPosition]);
+    listPosition < slideLimit - 1
+      ? setShowForArrow(true)
+      : setShowForArrow(false);
+  }, [listPosition, slideLimit]);
 
   useEffect(() => {
     const itemCollection = collection(db, "contenido");
 
     const q = filter
       ? query(itemCollection, where("category", "==", "Series"), limit(5))
-      : query(itemCollection, limit(5), orderBy("name"));
+      : query(itemCollection, limit(5));
 
     getDocs(q)
       .then((res) => {
@@ -59,10 +75,7 @@ const ItemListContainer = ({ filter }) => {
 
   return (
     <div>
-      <div
-        className="itemListContainer"
-        id={showBackArrow ? "move-forw" : "move-backw"}
-      >
+      <div className="itemListContainer" id={transition}>
         <ItemList items={items} />
       </div>
       <div className="itemList-arrow">
@@ -73,7 +86,9 @@ const ItemListContainer = ({ filter }) => {
         >
           <ArrowBackIosIcon
             className="arrow-list-icon"
-            sx={{ fontSize: "40px" }}
+            sx={{
+              fontSize: { xs: "30px", sm: "30px", md: "40px", lg: "50px" },
+            }}
           />
         </button>
         <div
@@ -88,7 +103,9 @@ const ItemListContainer = ({ filter }) => {
         >
           <ArrowForwardIosIcon
             className="arrow-list-icon"
-            sx={{ fontSize: "40px" }}
+            sx={{
+              fontSize: { xs: "30px", sm: "30px", md: "40px", lg: "50px" },
+            }}
           />
         </button>
       </div>

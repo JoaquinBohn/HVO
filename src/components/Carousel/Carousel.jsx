@@ -120,14 +120,14 @@ const Carousel = () => {
           <p className="slide-text">{selectedSlide.description}</p>
         </div>
         <div className="carousel-arrows">
-          <button className="carousel-button" onClick={previous}>
+          <button className="carousel-button" onClick={previous} id="control">
             <KeyboardArrowLeftTwoToneIcon
               sx={{
                 fontSize: { xs: "30px", sm: "40px", md: "50px", lg: "60px" },
               }}
             />
           </button>
-          <button className="carousel-button" onClick={next}>
+          <button className="carousel-button" onClick={next} id="control">
             <KeyboardArrowRightTwoToneIcon
               sx={{
                 fontSize: { xs: "30px", sm: "40px", md: "50px", lg: "60px" },
