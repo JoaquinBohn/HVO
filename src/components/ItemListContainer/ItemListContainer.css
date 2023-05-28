@@ -1,7 +1,15 @@
+.itemListContainer-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: black;
+}
+
 .itemListContainer {
   display: flex;
-  overflow: hidden;
-  width: 120%;
+  width: 110%;
   height: 250px;
   position: relative;
 }
@@ -10,7 +18,7 @@
   position: relative;
   bottom: 150px;
   height: 1px;
-  width: 85%;
+  width: 82%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -28,12 +36,12 @@
 }
 
 #move-forw-forw {
-  right: 700px;
+  right: 600px;
   animation: moveForwForw ease 0.5s;
 }
 
 #move-backw-mid {
-  right: 500px;
+  right: 335px;
   animation: moveBackwMid ease 0.5s;
 }
 
@@ -57,19 +65,19 @@
 
 @keyframes moveBackwMid {
   0% {
-    right: 700px;
+    right: 600px;
   }
   100% {
-    right: 500px;
+    right: 335px;
   }
 }
 
 @keyframes moveForwForw {
   0% {
-    right: 500px;
+    right: 335px;
   }
   100% {
-    right: 700px;
+    right: 600px;
   }
 }
 
@@ -105,9 +113,9 @@
   width: 100px;
 }
 
-@media (max-width: 470px) {
+@media (max-width: 480px) {
   .itemListContainer {
-    height: 120px;
+    height: 200px;
     width: 110%;
   }
 
@@ -116,8 +124,31 @@
   }
 
   .itemList-arrow {
-    width: 40%;
-    bottom: 60px;
+    width: 46%;
+    bottom: 120px;
     padding: 5px;
+  }
+
+  #move-forw {
+    right: 335px;
+    animation: moveForw ease 0.5s;
+  }
+
+  @keyframes moveForw {
+    0% {
+      right: 0;
+    }
+    100% {
+      right: 335px;
+    }
+  }
+
+  @keyframes moveBackw {
+    0% {
+      right: 335px;
+    }
+    100% {
+      right: 0;
+    }
   }
 }

@@ -6,8 +6,8 @@
   height: 400px;
 }
 
-@media (max-width: 470px) {
+@media (max-width: 480px) {
   .itemList {
-    height: 120px;
+    height: 200px;
   }
 }

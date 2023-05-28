@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin-bottom: 70px;
 }
 
 .highlight-info {
@@ -22,11 +23,16 @@
   font-weight: 100;
 }
 
+.highlight-info p {
+  text-align: left;
+  font-size: 20px;
+}
+
 .highlight-buttons {
   display: flex;
   flex-direction: row;
-  width: 200px;
-  justify-content: space-around;
+  width: 300px;
+  justify-content: space-evenly;
 }
 
 .highlight-content {
@@ -43,4 +49,27 @@
 
 .highlight-video:hover {
   opacity: 1;
+}
+
+@media (max-width: 480px) {
+  .highlight {
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+  .highlight-info {
+    width: 40%;
+  }
+
+  .highlight-info h2 {
+    font-size: 20px;
+  }
+
+  .highlight-info p {
+    font-size: 12px;
+  }
+
+  .highlight-buttons {
+    width: 120px;
+  }
 }

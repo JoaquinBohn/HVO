@@ -11,12 +11,12 @@
 .genres-title {
   color: white;
   font-weight: 100;
+  font-size: 30px;
 }
 
 .genres {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   width: 140%;
   height: 450px;
   justify-content: space-around;
@@ -28,9 +28,19 @@
   animation: moveForward ease 0.5s;
 }
 
+#move-forward-forward {
+  right: 700px;
+  animation: moveForwardForward ease 0.5s;
+}
+
 #move-backward {
   right: 0;
   animation: moveBackward ease 0.5s;
+}
+
+#move-backmid {
+  right: 350px;
+  animation: moveBackmid ease 0.5s;
 }
 
 @keyframes moveForward {
@@ -39,6 +49,24 @@
   }
   100% {
     right: 550px;
+  }
+}
+
+@keyframes moveForwardForward {
+  0% {
+    right: 350px;
+  }
+  100% {
+    right: 700px;
+  }
+}
+
+@keyframes moveBackmid {
+  0% {
+    right: 700px;
+  }
+  100% {
+    right: 350px;
   }
 }
 
@@ -210,4 +238,57 @@
 
 .aux-show {
   width: 100px;
+}
+
+@media (max-width: 480px) {
+  .genres-container {
+    padding: 10px;
+  }
+
+  .genres-title {
+    font-size: 20px;
+  }
+
+  .genres {
+    width: 300%;
+    height: 200px;
+  }
+
+  .genre-card {
+    width: 150px;
+    height: 200px;
+  }
+
+  .genre-name h3 {
+    font-size: 30px;
+  }
+
+  .genre-arrow {
+    bottom: 120px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  #move-forward {
+    right: 350px;
+    animation: moveForward ease 0.5s;
+  }
+
+  @keyframes moveForward {
+    0% {
+      right: 0;
+    }
+    100% {
+      right: 350px;
+    }
+  }
+
+  @keyframes moveBackward {
+    0% {
+      right: 350px;
+    }
+    100% {
+      right: 0;
+    }
+  }
 }

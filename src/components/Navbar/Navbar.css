@@ -96,7 +96,7 @@
   }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 480px) {
   .sections {
     display: none;
   }

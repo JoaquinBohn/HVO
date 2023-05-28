@@ -198,7 +198,7 @@ a {
   }
 }
 
-@media (max-width: 470px) {
+@media (max-width: 480px) {
   .carousel-content {
     height: 65vh;
   }

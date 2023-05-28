@@ -18,7 +18,7 @@ const ItemListContainer = ({ filter }) => {
   const moveBack = () => {
     if (listPosition > 0) {
       setListPosition(listPosition - 1);
-      if (listPosition === 2) {
+      if (listPosition === 2 && screenWidth < 481) {
         setTransition("move-backw-mid");
       } else {
         setTransition("move-backw");
@@ -29,7 +29,7 @@ const ItemListContainer = ({ filter }) => {
   const moveFor = () => {
     if (listPosition < slideLimit) {
       setListPosition(listPosition + 1);
-      if (listPosition === slideLimit - 2) {
+      if (listPosition === 1 && screenWidth < 481) {
         setTransition("move-forw-forw");
       } else {
         setTransition("move-forw");
@@ -38,7 +38,7 @@ const ItemListContainer = ({ filter }) => {
   };
 
   useEffect(() => {
-    setSlideLimit(screenWidth < 471 ? 3 : 2);
+    setSlideLimit(screenWidth < 481 ? 3 : 2);
   }, [screenWidth]);
 
   useEffect(() => {
@@ -64,6 +64,7 @@ const ItemListContainer = ({ filter }) => {
         const productos = res.docs.map((producto) => {
           return {
             ...producto.data(),
+            id: producto.id,
           };
         });
         setItems(productos);
@@ -74,7 +75,7 @@ const ItemListContainer = ({ filter }) => {
   }, [filter]);
 
   return (
-    <div>
+    <div className="itemListContainer-container">
       <div className="itemListContainer" id={transition}>
         <ItemList items={items} />
       </div>

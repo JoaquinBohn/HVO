@@ -10,7 +10,7 @@ const Navbar = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   const search = () => {
-    if (screenWidth > 470) {
+    if (screenWidth > 480) {
       setShowSearch(true);
     }
   };

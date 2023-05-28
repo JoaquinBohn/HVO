@@ -7,33 +7,53 @@ const Genres = () => {
   const [slidePosition, setSlidePosition] = useState(0);
   const [showBackwardArrow, setShowBackwardArrow] = useState(false);
   const [showForwardArrow, setShowForwardArrow] = useState(true);
+  const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [limit, setLimit] = useState(2);
+  const [genreTransition, setGenreTransition] = useState("move-backward");
 
   const moveBackward = () => {
     if (slidePosition > 0) {
       setSlidePosition(slidePosition - 1);
+      if (slidePosition === 2) {
+        setGenreTransition("move-backmid");
+      } else {
+        setGenreTransition("move-backward");
+      }
     }
   };
 
   const moveForward = () => {
-    if (slidePosition < 2) {
+    if (slidePosition < limit) {
       setSlidePosition(slidePosition + 1);
+      if (slidePosition === 1 && screenWidth < 481) {
+        setGenreTransition("move-forward-forward");
+      } else {
+        setGenreTransition("move-forward");
+      }
     }
   };
+
+  useEffect(() => {
+    setLimit(screenWidth < 481 ? 3 : 2);
+  }, [screenWidth]);
+
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  }, []);
 
   useEffect(() => {
     slidePosition === 0
       ? setShowBackwardArrow(false)
       : setShowBackwardArrow(true);
-    slidePosition < 1 ? setShowForwardArrow(true) : setShowForwardArrow(false);
-  }, [slidePosition]);
+    slidePosition < limit - 1
+      ? setShowForwardArrow(true)
+      : setShowForwardArrow(false);
+  }, [slidePosition, limit]);
 
   return (
     <div className="genres-container">
       <h2 className="genres-title">Explore by genre</h2>
-      <div
-        className="genres"
-        id={showBackwardArrow ? "move-forward" : "move-backward"}
-      >
+      <div className="genres" id={genreTransition}>
         <div className="genre-card" id="romance">
           <div className="genre-name">
             <h3>Romance</h3>
