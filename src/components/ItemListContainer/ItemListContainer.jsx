@@ -15,6 +15,16 @@ const ItemListContainer = ({ filter }) => {
   const [slideLimit, setSlideLimit] = useState(2);
   const [transition, setTransition] = useState("move-backw");
 
+  const setWindowWidth = () => {
+    setScreenWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", setWindowWidth);
+    return () => {
+      window.removeEventListener("resize", setWindowWidth);
+    };
+  }, []);
+
   const moveBack = () => {
     if (listPosition > 0) {
       setListPosition(listPosition - 1);
@@ -40,10 +50,6 @@ const ItemListContainer = ({ filter }) => {
   useEffect(() => {
     setSlideLimit(screenWidth < 481 ? 3 : 2);
   }, [screenWidth]);
-
-  useEffect(() => {
-    setScreenWidth(window.innerWidth);
-  }, []);
 
   useEffect(() => {
     listPosition === 0 ? setShowBackArrow(false) : setShowBackArrow(true);

@@ -24,3 +24,14 @@
     font-size: 20px;
   }
 }
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+  .trending {
+    padding-left: 20px;
+    height: 270px;
+  }
+
+  .trending-title {
+    font-size: 25px;
+  }
+}

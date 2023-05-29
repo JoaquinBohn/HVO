@@ -11,6 +11,16 @@ const Genres = () => {
   const [limit, setLimit] = useState(2);
   const [genreTransition, setGenreTransition] = useState("move-backward");
 
+  const setWindowWidth = () => {
+    setScreenWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    window.addEventListener("resize", setWindowWidth);
+    return () => {
+      window.removeEventListener("resize", setWindowWidth);
+    };
+  }, []);
+
   const moveBackward = () => {
     if (slidePosition > 0) {
       setSlidePosition(slidePosition - 1);
@@ -36,10 +46,6 @@ const Genres = () => {
   useEffect(() => {
     setLimit(screenWidth < 481 ? 3 : 2);
   }, [screenWidth]);
-
-  useEffect(() => {
-    setScreenWidth(window.innerWidth);
-  }, []);
 
   useEffect(() => {
     slidePosition === 0

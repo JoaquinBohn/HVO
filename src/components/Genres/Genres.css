@@ -292,3 +292,33 @@
     }
   }
 }
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+  .genres-container {
+    padding: 20px;
+  }
+
+  .genres-title {
+    font-size: 25px;
+  }
+
+  .genres {
+    width: 170%;
+    height: 250px;
+  }
+
+  .genre-card {
+    width: 180px;
+    height: 250px;
+  }
+
+  .genre-name h3 {
+    font-size: 30px;
+  }
+
+  .genre-arrow {
+    bottom: 120px;
+    width: 100%;
+    padding: 10px;
+  }
+}

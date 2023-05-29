@@ -86,3 +86,23 @@
     font-size: 18px;
   }
 }
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+  .card-img-container {
+    width: 215px;
+    height: 170px;
+    transition: transform 0.5s;
+  }
+
+  .category {
+    font-size: 15px;
+  }
+
+  #name {
+    font-size: 20px;
+  }
+
+  #genre {
+    font-size: 18px;
+  }
+}

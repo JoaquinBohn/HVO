@@ -226,3 +226,18 @@ a {
     height: 65vh;
   }
 }
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+  .carousel-arrows {
+    bottom: 250px;
+  }
+
+  .slide-title {
+    font-size: 40px;
+  }
+
+  .slide-text {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+}

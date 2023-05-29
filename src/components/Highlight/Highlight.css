@@ -73,3 +73,26 @@
     width: 120px;
   }
 }
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+  .highlight {
+    height: 250px;
+    margin-bottom: 40px;
+  }
+
+  .highlight-info {
+    width: 40%;
+  }
+
+  .highlight-info h2 {
+    font-size: 25px;
+  }
+
+  .highlight-info p {
+    font-size: 18px;
+  }
+
+  .highlight-buttons {
+    width: 200px;
+  }
+}

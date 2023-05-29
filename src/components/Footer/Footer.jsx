@@ -13,22 +13,40 @@ const Footer = () => {
           target="_blank"
           rel="noreferrer"
         >
-          <GitHubIcon />
+          <GitHubIcon
+            sx={{
+              fontSize: { xs: "20px", sm: "30px", md: "40px", lg: "50px" },
+            }}
+          />
         </a>
         <a
           href="https://www.linkedin.com/in/joaquin-bohn/"
           target="_blank"
           rel="noreferrer"
         >
-          <LinkedInIcon />
+          <LinkedInIcon
+            sx={{
+              fontSize: { xs: "20px", sm: "30px", md: "40px", lg: "50px" },
+            }}
+          />
         </a>
 
-        <PortraitIcon />
+        <a
+          href="https://portfolio-mauve-theta-34.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <PortraitIcon
+            sx={{
+              fontSize: { xs: "20px", sm: "30px", md: "40px", lg: "50px" },
+            }}
+          />
+        </a>
       </div>
 
       <div className="legal">
         <p>
-          ©2023 This is web page is just a frontend student project made for
+          ©2023 This web page is just a frontend student project made for
           educational purposes.
         </p>
       </div>

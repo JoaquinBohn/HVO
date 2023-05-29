@@ -55,8 +55,8 @@ const Highlight = () => {
       <div className="highlight-content">
         <div className="highlight-video">
           <video
-            width={screenWidth < 481 && "200"}
-            height={screenWidth < 481 && "150"}
+            width={screenWidth < 481 ? "200" : screenWidth < 769 && "320"}
+            height={screenWidth < 481 ? "150" : screenWidth < 769 && "240"}
             autoPlay
             loop
             muted

@@ -32,15 +32,25 @@
     padding-left: 10px;
   }
 
-  .exclusive-info {
-    padding-left: 0;
-  }
-
   .exclusive-info h2 {
     font-size: 20px;
   }
 
   .exclusive-info p {
     font-size: 15px;
+  }
+}
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+  .exclusive {
+    padding-left: 20px;
+  }
+
+  .exclusive-info h2 {
+    font-size: 25px;
+  }
+
+  .exclusive-info p {
+    font-size: 18px;
   }
 }

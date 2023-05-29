@@ -152,3 +152,20 @@
     }
   }
 }
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+  .itemListContainer {
+    height: 200px;
+    width: 110%;
+  }
+
+  .aux-list-show {
+    width: 10px;
+  }
+
+  .itemList-arrow {
+    width: 68%;
+    bottom: 120px;
+    padding: 5px;
+  }
+}
