@@ -4,23 +4,39 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import "./Genres.css";
 
 const Genres = () => {
+  //slidePosition indica las veces que se ha desplazado hacia la derecha el carousel
+  //0 indica ningun posicion original, 1 indica posicion media, 2 indica posicion final
   const [slidePosition, setSlidePosition] = useState(0);
+
+  //showBackwardArrow y showForwardArrow sirven para mostrar u ocultar los botones flecha
   const [showBackwardArrow, setShowBackwardArrow] = useState(false);
   const [showForwardArrow, setShowForwardArrow] = useState(true);
+
+  //screenWidth guarda el valor del ancho de pantalla
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+  //limit indica el limite de desplazamientos del carousel hacia la derecha
+  //Si el ancho de pantalla es menor a 481px entonces limit vale 3, caso contrario 2
   const [limit, setLimit] = useState(2);
+
+  //genreTransition indica la animacion que corresponde al movimiento del carousel
   const [genreTransition, setGenreTransition] = useState("move-backward");
 
+  //Esta seccion maneja la logica de la actualizacion del ancho de pantalla
+  //Permite obtener el ancho de pantalla de manera dinamica
   const setWindowWidth = () => {
     setScreenWidth(window.innerWidth);
   };
+
   useEffect(() => {
     window.addEventListener("resize", setWindowWidth);
     return () => {
       window.removeEventListener("resize", setWindowWidth);
     };
   }, []);
+  //------------------------------------------------------------------------
 
+  //Esta seccion maneja el movimiento y la asignacion de animaciones del carousel
   const moveBackward = () => {
     if (slidePosition > 0) {
       setSlidePosition(slidePosition - 1);
@@ -42,11 +58,14 @@ const Genres = () => {
       }
     }
   };
+  //------------------------------------------------------------------------
 
+  //Se usa el hook para seleccionar el valor de limit en funcion del ancho de pantalla
   useEffect(() => {
     setLimit(screenWidth < 481 ? 3 : 2);
   }, [screenWidth]);
 
+  //Este hook se usa para mostrar u ocultar los botones flecha del carousel
   useEffect(() => {
     slidePosition === 0
       ? setShowBackwardArrow(false)

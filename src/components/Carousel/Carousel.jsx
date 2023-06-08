@@ -5,6 +5,7 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import "./Carousel.css";
 
 const Carousel = () => {
+  //Se crean tres objetos con los datos de tres peliculas
   const slide1 = {
     id: "movie-1",
     title: "Mars 33",
@@ -27,18 +28,25 @@ const Carousel = () => {
       "https://res.cloudinary.com/drdgu83bp/video/upload/v1684159753/pelis/love_hxbmiv.mp4",
   };
 
+  //Se agrupan los tres objetos en un array para facilitar el uso
   const slides = [slide1, slide2, slide3];
-  const [selectedSlide, setSelectedSlide] = useState(slides[0]);
 
+  //selectedSlide y selectedIndex funcionan en conjunto para seleccionar
+  //que objeto se mostrara a continuacion en el carousel
+  const [selectedSlide, setSelectedSlide] = useState(slides[0]);
   const [selectedIndex, setSelectedIndex] = useState(0);
+
+  //buttonState es un array que indica cual es el estado de los indices del carousel
   const [buttonState, setButtonState] = useState([
     "active",
     "inactive",
     "inactive",
   ]);
 
+  //loading luego se usa para pasar de la imagen de la pelicula al video de la misma
   const [loading, setLoading] = useState(false);
 
+  //setChange maneja la logica del cambio a la siguiente/anterior pelicula del carousel
   const setChange = (index) => {
     setSelectedIndex(index);
     setSelectedSlide(slides[index]);
@@ -48,18 +56,21 @@ const Carousel = () => {
     setLoading(true);
   };
 
+  //previous valida y obtiene el indice de la pelicula anterior del carousel
   const previous = () => {
     const condition = selectedIndex > 0;
     const nextIndex = condition ? selectedIndex - 1 : slides.length - 1;
     setChange(nextIndex);
   };
 
+  //next valida y obtiene el indice de la pelicula siguiente del carousel
   const next = () => {
     const condition = selectedIndex < slides.length - 1;
     const nextIndex = condition ? selectedIndex + 1 : 0;
     setChange(nextIndex);
   };
 
+  //Este useEffect se encarga de la reproduccion automatica del carousel
   useEffect(() => {
     const interval = setInterval(() => {
       next();
@@ -67,6 +78,8 @@ const Carousel = () => {
     return () => clearInterval(interval);
   });
 
+  //Este useEffect maneja los cambios de estado del array de indicadores del carousel
+  //Cada vez que se pasa de una pelicula a otra se debe activar el indicador de la misma
   useEffect(() => {
     if (selectedIndex === 1) {
       setButtonState(["inactive", "active", "inactive"]);

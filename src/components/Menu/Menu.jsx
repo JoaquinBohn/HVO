@@ -6,6 +6,7 @@ import "aos/dist/aos.css";
 import "./Menu.css";
 
 const Menu = () => {
+  //La logica de este componente solo se encarga de las animaciones
   const [show, setShow] = useState(false);
   const [hide, setHide] = useState(true);
 

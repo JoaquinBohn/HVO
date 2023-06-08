@@ -6,6 +6,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Navbar = () => {
+  //La logica de este componente solo se encarga de las animaciones
   const [showSearch, setShowSearch] = useState(false);
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
