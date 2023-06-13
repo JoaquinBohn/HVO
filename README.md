@@ -1,4 +1,4 @@
-#Home page de plataforma de streaming
+# Home page de plataforma de streaming
 
 Este es un proyecto desarrollado con react js que trata de replicar el diseño de la página de inicio de una plataforma de streaming de series, peliculas y documentales. Se puede interactuar con el sitio pero este no cuenta con ninguna funcionalidad, es decir ningún enlace funciona y no es posible reproducir ni buscar contenido. Esto se debe a que para este proyecto quise enfocarme únicamente en el diseño visual del sitio.
 
