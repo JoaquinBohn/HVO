@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+#Home page de plataforma de streaming
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este es un proyecto desarrollado con react js que trata de replicar el diseño de la página de inicio de una plataforma de streaming de series, peliculas y documentales. Se puede interactuar con el sitio pero este no cuenta con ninguna funcionalidad, es decir ningún enlace funciona y no es posible reproducir ni buscar contenido. Esto se debe a que para este proyecto quise enfocarme únicamente en el diseño visual del sitio.
 
-## Available Scripts
+Sitio desplegado: [ir a HVOmax](https://hvo.vercel.app/)
 
-In the project directory, you can run:
+## NPM
 
-### `npm start`
+![](https://res.cloudinary.com/drdgu83bp/image/upload/v1678719003/Assets/npm_logo_k9cjrx.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm (Node Package Manager) es, como su propio nombre indica, el gestor de paquetes, módulos o librerías que nos proporciona Nodejs. Se trata de una herramienta que nos facilita el trabajo con librerías permitiéndonos instalar, actualizar y eliminar librerías de forma relativamente sencilla y automatizar la gestión de dependencias.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Para comenzar a trabajar con npm utilizaremos npm cli, el módulo que gestiona la consola de npm y desde la que correremos los comandos que necesitemos. Este módulo viene incorporado con Nodejs, por lo que al instalar Nodejs adquiriremos también NPM.
 
-### `npm test`
+Para comprobar si tenemos instalado Nodejs podemos escribir en nuestra consola el siguiente comando:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+node -v
+```
 
-### `npm run build`
+Para comprobar si ya tenemos npm instalado correremos un comando similar:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm -v
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+En caso de que no tengamos instalado npm o Nodejs, procederemos a instalar Node.js para obtener ambos.
+Recomiendo seguir los pasos de instalación indicados en el sitio oficial:
+[Node.js.org](https://nodejs.org/en/download/package-manager/#windows-1)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Correr proyecto
 
-### `npm run eject`
+Una vez instalado npm, siga estos sencillos pasos:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Utilizar el comando cd en la consola para ubicarte la nueva carpeta donde ubicaremos el proyecto.
+- Clonar repositorio escribiendo en la consola el siguiente script:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+git clone https://github.com/JoaquinBohn/HVO.git
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Escribir el siguiente código para instalar todas las dependencias:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+npm install
+```
 
-## Learn More
+- Finalmente correr el proyecto escribiendo:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Acerca de HVOmax
 
-### Code Splitting
+Como se mencionó al inicio del documento esta página no cuenta con ninguna funcionalidad más allá de las interacciones básicas. Como se podrá deducir por el nombre intenté guiar el diseño del proyecto tratando de replicar el famoso servicio de streaming, con pequeñas diferencias en detalles. El mismo cuenta con cinco secciones además del navbar y footer. La primer sección es un carousel de tres series/peliculas destacadas, la segunda es otro carousel (sin autoplay) del contenido que es tendencia en el momento, en tercer lugar otro carousel con las categorías del contenido de la plataforma, en la cuarta sección una pelicula destacada con información y un video, quinta y última sección tenemos otro carousel con el contenido exclusivo de la plataforma.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+El sitio cuenta con un diseño responsive enfocado para los siguientes valores del ancho de pantalla:
 
-### Analyzing the Bundle Size
+- Full screen
+- Tablet: 760px
+- Dispositivos móviles: 375px
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+No se asegura la correcta visualización en otros anchos de pantalla.
